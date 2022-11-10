@@ -1,0 +1,117 @@
+.subject_container{
+    min-height: 900px;
+    .subject_wrapper{
+        @include wrapper;
+    }
+}
+.subject_page_title_container{
+    .p1{
+        color: $N1_Primary_Text;
+        text-align: center;
+        padding: 50px 0;
+    }
+}
+.subject_page_title_box {
+    position: relative;
+    border: 4px solid $G1_Secondary_Color;
+    border-radius: 100px;
+    box-shadow: 0 0 8px $title_white_shadow;
+    width: 47vw;
+    @include margin_auto;
+    .subject_hot_title{
+        color: $G1_Secondary_Color;
+        font-size: 3vw;
+        line-height: 2vw;
+        &::after{
+            position: absolute;
+            content: url(../assets/images/subject/lightningGroup.png);
+            top: -5.3vw;
+            right: -5vw;
+        }
+    }
+}
+.subject_cards_container{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+//card flip side
+.subject_cards_lock_container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    top: -24vw;
+}
+.subject_cards_group{
+    @include base(21vw, 24vw);
+    background-color: $N1_Primary_Text;
+    border-radius: 30px;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    h4{
+        color: $P3_Primary_Color_03;
+        text-transform: uppercase;
+        line-height: 0;
+    }
+    .p2{
+        color: $P3_Primary_Color_03;
+        font-weight: 400;
+        line-height: 10px;
+    }
+    .subject_card_img{
+        @include margin_auto;
+        margin-bottom: 20px;
+    }
+}
+//card lock side
+.subject_cards_group_lock{
+    box-sizing: border-box;
+    background: $subject_cards_bgc;
+    .para_lock_week{
+        @include heading_EN(32px, 48px);
+        color: $N1_Primary_Text;
+        line-height: 20px;
+    }
+    .subject_lock_img{
+        @include base(13vw,13vw);
+        @include margin_auto;
+    }
+}
+.sponsor_tags{
+    .title{
+        background-color: #83FAC1;
+        @include margin_auto;
+        border-radius: 8px;
+        display: inline;
+        padding: 4px 8px;
+    }
+}
+.subject_card_img{
+    width: 9vw;
+}
+.subject_card_footer{
+    display: flex;
+    justify-content: space-between;
+    .p_arrow{
+        position: relative;
+        color: $P3_Primary_Color_03;
+        font-weight: 400;
+        &::after{
+            content:url(../assets/images/subject/arrow.png);
+            vertical-align: middle;
+            padding-left: 8px;
+        }
+        &:hover{
+            font-weight: 800;
+            border-bottom: 1px solid;
+        }
+    }
+    .p_period{
+        color: $P2_Primary_Color_02;
+        font-family: $font_family_black;
+        text-transform: uppercase;
+    }
+    
+}

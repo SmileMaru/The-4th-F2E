@@ -1,0 +1,86 @@
+// 字型
+$font_family: 'Noto Sans CJK TC';
+$font_family_black: 'ppm_black';
+$font_family_blackItalic: 'ppm_blackItalic';
+$font_family_regular: 'ppm_regular';
+$font_family_regularItalic: 'ppm_regularItalic'; 
+$font_family_light: 'ppm_light'; 
+
+@mixin heading_CN ($fontS, $lineH){
+    font-size: $fontS;
+    line-height: $lineH;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-family: $font_family; 
+}
+@mixin heading_EN ($fontS, $lineH ){
+    font-size: $fontS;
+    line-height: $lineH;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    font-family: $font_family_black;
+}
+
+//paragraph 
+@mixin para_CN ($fontS, $lineH){
+    font-size: $fontS;
+    line-height: $lineH;
+    letter-spacing: 0;
+}
+@mixin para_EN ($fontS, $lineH ){
+    font-size: $fontS;
+    line-height: $lineH;
+    letter-spacing: 0;
+}
+
+// heading_CN 中文標題
+.page_title{
+    color: $N1_Primary_Text;
+    text-shadow: 0 0 8px $title_white_shadow;
+    text-align: center;
+    font-size: 2.1vw;
+}
+// account para 強調字
+.accent_word{
+    color: $G1_Secondary_Color;
+    @include para_CN(20px, 28px);
+    font-family: $font_family;
+}
+
+h1{
+    @include heading_CN(3vw, 75px);
+}
+h2{
+    @include heading_CN(2.6vw, 60px);
+}
+h3{
+    @include heading_CN(2.1vw, 48px);
+}
+h4{
+    @include heading_CN(24px, 36px);
+}
+h5{
+    @include heading_CN(20px, 28px);
+}
+.title{
+    @include heading_CN(16px, 20px);
+}
+.subTitle{
+    @include heading_CN(14px, 18px);
+}
+// paragraph_CN & EN
+.p1{
+    @include para_CN(24px, 36px);
+}
+.p2{
+    @include para_CN(20px, 28px);
+}
+.p3{
+    @include para_CN(16px, 20px);
+}
+.p4{
+    @include para_CN(14px, 18px);
+}
+.p_caption{
+    @include para_CN(12px, 16px);
+}

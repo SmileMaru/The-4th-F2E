@@ -1,0 +1,86 @@
+.reward_container {
+    width: 100%;
+  }
+  .reward_wrapper {
+    @include wrapper;
+  }
+  .reward_vetor_line_container {
+    width: 57vw;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  .reward_vetor_container {
+    display: flex;
+    justify-content: space-between;
+    img {
+      vertical-align: bottom;
+    }
+    .vetor_flag {
+      @include base(3.5vw, 4vw);
+      -webkit-filter: drop-shadow(0px 0px 8px $title_white_shadow);
+      filter: drop-shadow(0px 0px 8px $title_white_shadow);
+    }
+    .vetor_car {
+      @include base(6.5vw, 2.5vw);
+      align-self: end;
+    }
+  }
+  .reward_underline {
+    @include base(57vw, 3px);
+    margin: 10px 0;
+    background-color: $N1_Primary_Text;
+  }
+  .reward_cards_container {
+    display: flex;
+    justify-content: center;
+    .reward_cards_wrapper{
+        min-width: 1440px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.reward_cards_group {
+    border: 2px solid;
+    background: linear-gradient($N3_Card_Bk_Color_03,#151F3F) padding-box, linear-gradient(90deg, #313A65,#151F3F) border-box;
+    background-image: $N3_Card_Bk_Color_03;
+    border-color: transparent;
+    width: 32vw;
+    box-sizing: border-box;
+    border-radius: 32px;
+    padding: 3rem;
+    margin: 0 2vw;   
+}
+.reward_cards_group:hover{
+    transition: .3s linear .2s;
+    background: linear-gradient($N3_Card_Bk_Color_03,#151F3F) padding-box, linear-gradient(180deg, #9DA4FF,#55FFAD) border-box;
+    transform: translateY(-15px);
+}
+.reward_cards_title{
+    color: $P1_Primary_Color_01;
+    text-shadow: 0px 0px 10px rgba(157, 164, 255, 60%);
+    font-size: 30px;
+}
+.card_title{
+    text-align: center;
+}
+.reward_cards_img {
+    width: 5.5vw;
+    @include margin_auto;
+}
+.card_context {
+    color: $N1_Primary_Text; //#fff
+    .para_2{
+        font-size: 18.5px;
+        line-height: 25px;
+    }
+    .p2{
+        font-weight: 400;
+    }
+    .para_space{
+        padding: 0 10px;
+    }
+    .p3{
+        font-weight: 400;
+        color: $N2_Secondary_Text;
+    }
+}

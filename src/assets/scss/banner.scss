@@ -1,0 +1,130 @@
+.banner_container{
+    width: 100%;
+    .banner_wrapper{
+        @include wrapper;
+    }
+}
+.banner_content_container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .banner_title_box{
+        padding: 5%;
+        position: relative;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .banner_sub_title{
+        color: $N1_Primary_Text;
+        letter-spacing: 1.3vw;
+        line-height: 0;
+        transform: translateY(-20px);
+
+    }
+    .banner_main_title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $P1_Primary_Color_01;
+        position: relative;
+        white-space: nowrap;
+        letter-spacing: 15px;
+        font-size: 6vw; 
+        font-family: $font_family_black;
+        &::before{
+            letter-spacing: 15px;
+            content: "THE F2E";
+            position: absolute;
+            right: 1.5%;
+            bottom: 9.5%;
+            color: $G1_Secondary_Color;
+        }
+        &::after{
+            right: 1%;
+            bottom: 4%;
+            color: $N1_Primary_Text;
+            letter-spacing: 15px;
+            content: "THE F2E";
+            position: absolute;
+        }
+    }
+    .banner_text{
+        position: absolute;
+        left: 78%;
+        top: 15%;
+        @include heading_EN(3vw, 0px);
+        color: $G1_Secondary_Color;
+        &::before{
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            content: '4TH';
+            color: $P1_Primary_Color_01;
+        }
+        &::after{
+            position: absolute;
+            top: 2px;
+            left: 0;
+            content: '4TH';
+            color: $N1_Primary_Text;
+        }
+    }
+}
+.banner_btn{
+    padding-top: 5vw;
+}
+.banner_content_img_group{
+    position: relative;
+    display: flex;
+    .close_tag_img{
+        @include base(10vw, 10vw);
+        position: absolute;
+        top: 12vw;
+        transform: rotate(-20deg);
+    }
+    .arrow_img{
+        @include base(14vw, 14vw);
+        position: absolute;
+        top: 17vw;
+        left: 11vw;
+    }
+    .chart_img{
+        @include base(18vw, 18vw);
+        position: absolute;
+        left: 75%;
+        top: 17vw;
+    }
+    .pacman_img{
+        @include base(12vw, 12vw);
+        position: absolute;
+        right: -7%;
+        top: 5vw;
+    }
+}
+.banner_marquee_text{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding-top: 6vw;
+    .marquee_1{
+        color: #fa0;
+    }
+    .marquee_text{
+        display: flex;
+        align-items: center;
+        min-height: 4.4vw;
+        white-space: nowrap; /*文字必須設為nowrap，否則文字會自動換行*/
+        @include heading_EN(4vw, 0);
+        background: linear-gradient(180deg,#9FA6FF, #55FFAD);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 4px transparent;
+        &::before{
+            content:url(../assets/images/banner/star.png);
+            padding: 0 30px;
+        }
+    }
+}
+

@@ -1,0 +1,36 @@
+//title shadow
+$title_white_shadow: rgba(255, 255, 255, 0.6);
+
+// text shadow effect
+$text_drop_shadow: drop-shadow(0px 0px 4px $title_white_shadow);
+
+//reward cards border color
+$border_gradient: linear-gradient(90deg, #151F3F, #313A65,#6E77E9);
+
+//subject cards background color
+$subject_cards_bgc: linear-gradient(#9DA4FF,#6E77E9);
+
+//Neutral Colors 中性色
+$N1_Primary_Text: #fff;
+$N2_Secondary_Text: #858993;
+$N3_Card_Bk_Color_03: #151F3F;
+$N4_Bk_Color_01: #0E1835;
+$N5_Bk_Color_02: #06102B;
+$N6_Primary_Text: #000;
+
+//Primary Colors 主色 
+$P1_Primary_Color_01: #9DA4FF;
+$P2_Primary_Color_02: #DCDEFF;
+$P3_Primary_Color_03: #6E77E9;
+
+//Secondary Colors 輔色 
+$G1_Secondary_Color: #55FFAD;
+
+//Yellow Colors 黃色 
+$Y1_Button: #FFE34E;
+$Y2_Decoration_Btn_Hover: #FFF385;
+
+//Gradient Colors 漸層色
+$Gradient_Card_Bk: #9DA4FF, #6E77E9;
+$Gradient_Decoration: #9DA4FF,#55FFAD;
+$Gradient_Card_Stroke: #313A65,#6E77E9;

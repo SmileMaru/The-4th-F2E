@@ -1,0 +1,97 @@
+.interactive_container{
+    min-height: 700px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.interactive_marquee{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(90deg,#9DA4FF, #55FFAD);
+    .interactive_para{
+        display: inline-block;
+        white-space: nowrap; /*文字必須設為nowrap，否則文字會自動換行*/
+        min-height: 67px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $N1_Primary_Text;
+        @include heading_EN(2.4vw, 2.8vw);
+        &::before{
+            content:'';
+            @include base(1vw, 1vw);
+            background-color: $N1_Primary_Text;
+            border-radius: 50%;
+            margin: 0 30px;
+        }
+    }
+}
+.interactive_block{
+    min-height: 561px;
+    background-image: url(../assets/images/interactive/banner_bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interactive_block_title_box{
+    position: relative;
+    .interactive_banner_img{
+        @include base(530px, 335px);
+    }
+    .interactive_title_img{
+        z-index: 1;
+        position: absolute;
+        @include base(416px, 224px);
+        top: 50px;
+        left: 50px;
+    }
+}
+.interactive_hands_img_box{
+    position: relative;
+    .hand_img{
+        position: absolute;
+        @include base(250px, 250px);
+    }
+    .left_hand{
+        top: -300px;
+        left: -220px;
+    }
+    .right_hand{
+        top: -300px;
+        right: -220px;
+    }
+}
+.interactive_circle_img_box{
+    position: relative;
+    .yellow_circle{
+        position: absolute;
+        @include base(205px, 205px);
+        top: -20px;
+        left: -220px;
+    }
+    .purple_circle{
+        position: absolute;
+        @include base(110px,110px);
+        top: -380px;
+        right: -60px;
+    }
+
+}
+.interactive_ui_web_box{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    span{
+        @include heading_CN(24px, 36px);
+    }
+    .interactive_close_img_box{
+        transform: translateX(-10px);
+        width: 20px;
+        margin: auto 0;
+        .interactive_close_img{
+            width: 100%;
+    }
+    }
+    
+}

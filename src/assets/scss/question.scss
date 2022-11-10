@@ -1,0 +1,113 @@
+// question 變數
+@import './base/style.scss';
+$btline_height: 4px;
+$btline_width: 12px;
+$bt_radius: 20px;
+$p_font_size: 20px;
+$p_line_height: 28px;
+
+.q_section_container{
+    position: relative;
+    width: 100%;
+    // min-height: 1680px;
+    box-sizing: border-box;
+    .btn_box{
+        margin-top: 6.66vw;
+    }
+}
+.q_wrapper{
+    @include wrapper();
+}
+.q_content_box{
+    @include wrapper();
+    .q_heading{
+        font-family: $font_family_black;
+        text-align: center;
+        font-size: 3.5vw;
+        color: $N1_Primary_Text;
+        -webkit-filter: $text_drop_shadow;
+        filter: $text_drop_shadow;
+    }
+}
+.tabs{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; 
+    padding-bottom: 3rem;
+    color: $N1_Primary_Text;
+    li{
+        color: $N2_Secondary_Text;
+        font-size: $p_font_size;
+        font-weight: 400;
+        line-height: $p_line_height;
+        cursor: pointer;
+        position: relative;
+    }
+    li.active{
+        color: $N1_Primary_Text;
+        -webkit-filter: $text_drop_shadow;
+        filter: $text_drop_shadow;
+    }
+}
+.tabs li::after{
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: $btline-height;
+    background: $G1_Secondary_Color;
+    border-radius: $bt-radius;
+    transition: .1s linear;
+}
+.tabs li.active::after{
+    width: $btline-width;
+}
+.q_box{
+    display: flex;
+}
+.q_qty{
+    font-family: $font_family_black;
+    margin-right: 2rem;
+    color: $P3_Primary_Color_03;
+}
+.q_common_container{
+    box-sizing: border-box;
+    position: relative;
+    @include margin_auto;
+    width: 80%;
+}
+.q_content{
+    box-sizing: border-box;
+    color: $N5_Bk_Color_02;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: $N1_Primary_Text;
+    padding: 80px;
+    border-radius: 32px;
+}
+.q_content.active{
+    display: block;
+    animation: fade 1s ease;
+}
+.q_accordion{
+    h4{
+        font-family: $font_family;
+    }
+    p{
+        font-weight: 400;
+        font-size: $p_font_size;
+        line-height: $p_line_height;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,23 @@
+.btn_signup{
+    font-family: $font_family;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16vw;
+    height: 5vw;
+    border-radius: 50px;
+    background-color: $Y1_Button;
+    padding: 20px, 24px, 20px, 24px;
+    color: $N6_Primary_Text;
+    font-size: 1.6vw;
+    font-weight: 700;
+    &:hover{
+        background-color: $Y2_Decoration_Btn_Hover;
+        transition: .2s ease-in;
+    }
+}
+.btn_box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
