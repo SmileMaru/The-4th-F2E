@@ -1,5 +1,6 @@
 .banner_container{
     width: 100%;
+    padding-top: 0;
     .banner_wrapper{
         @include wrapper;
     }

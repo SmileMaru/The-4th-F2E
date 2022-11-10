@@ -2,6 +2,9 @@
   <nav class="nav_container">
     <div class="nav_wrapper">
       <div class="nav_logo">
+        <!-- <div class="nav_burger">
+          <img src="../assets/images/header/burger.png" alt="" class="burger_img" />
+        </div> -->
         <a href="https://2022.thef2e.com/" target="blank"
           ><img class="logo_img" src="../assets/images/banner/logo.png" alt=""
         /></a>
@@ -23,13 +26,13 @@
 
 <script>
 export default {
-  mounted(){
-    window.addEventListener("scroll",function(){
-            console.log(scrollY);
-            var header = document.querySelector(".nav_container");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-  }
+  mounted() {
+    window.addEventListener("scroll", function () {
+      console.log(scrollY);
+      var header = document.querySelector(".nav_container");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  },
 };
 </script>
 
@@ -46,13 +49,9 @@ $p_line_height: 28px;
   z-index: 1000;
   background-color: $N5_Bk_Color_02;
   width: 100%;
-  position: fixed;
+  // position: fixed;
   padding: 0 5%;
   top: 0;
-  .sticky{
-    padding: 5px 100px;
-    background: #fff;
-}
 }
 
 .nav_wrapper {
@@ -75,6 +74,7 @@ $p_line_height: 28px;
     }
   }
 }
+
 .nav_menu {
   position: relative;
   padding: 1vw 0;
@@ -85,7 +85,7 @@ $p_line_height: 28px;
     padding: 0.6vw 1.3vw;
     font-size: 1.3vw;
   }
-  li:hover::after{
+  li:hover::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -112,9 +112,22 @@ $p_line_height: 28px;
   }
 }
 .nav_logo {
+  position: relative;
   display: flex;
   align-items: center;
   .logo_img {
+    width: 100%;
+  }
+}
+.nav_burger {
+  position: relative;
+  width: 50px;
+  margin: 1rem;
+
+  @include sm() {
+    display: block;
+  }
+  .burger_img {
     width: 100%;
   }
 }
