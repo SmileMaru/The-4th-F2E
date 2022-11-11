@@ -1,8 +1,15 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/vue-project/dist/favicon.ico"><title>vue-project</title><script defer="defer" src="/vue-project/dist/js/chunk-vendors.1eb51cfa.js"></script><script defer="defer" src="/vue-project/dist/js/app.fc03a44a.js"></script><link href="/vue-project/dist/css/app.0be91309.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="load-4"><div class="ring-1"></div></div><div class="wave"><span class="wavetxt">loading...</span> <span class="wavetext">loading...</span></div></div></body></html><style>:root{
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/vue-project/dist/favicon.ico"><link rel="stylesheet" href="../public//font/PPM/font.css"><title>THE 4TH F2E</title><script defer="defer" src="/vue-project/dist/js/chunk-vendors.9c551da2.js"></script><script defer="defer" src="/vue-project/dist/js/app.807c2c62.js"></script><link href="/vue-project/dist/css/app.7505a0f1.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="load-4"><div class="ring-1"></div></div><div class="wave"><span class="wavetxt">F2E WEEK1</span> <span class="wavetext">F2E WEEK1</span></div></div></body></html><style>:root{
       --text-color: #DCDEFF;
       --ring-bg-color: #6E77E9;
   }
-
+  body{
+    background-color: #06102B;
+  }
+  #id{
+    font-family: 'ppm_black';
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media (max-width:1024px){
       .wave{
           display: none;
@@ -12,7 +19,7 @@
       height: 10px;
       margin: 0 auto;
       padding: 10px;
-      border: 7px dashed --ring-bg-color;
+      border: 7px dashed var(--ring-bg-color);
       border-radius: 100%;
   }
 
@@ -57,11 +64,11 @@
 
   .wavetxt {
       color: transparent;
-      -webkit-text-stroke: 2px var(--text-color);
+      -webkit-text-stroke: 2px var(--ring-bg-color);
   }
 
   .wavetext {
-      color: var(--text-color);
+      color: #DCDEFF;
       animation: wave 2s ease-in-out infinite;
   }
 
