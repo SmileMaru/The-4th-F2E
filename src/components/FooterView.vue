@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      footerText: "Copyright © 2022 HexSchool.All rights reserved.",
+      footerText: "Copyright © 2022 code by Maru Chen / designed by Jenny Wu.",
     };
   },
 };

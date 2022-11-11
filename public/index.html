@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="../public//font/PPM/font.css">
+    <title>THE 4TH F2E</title>
   </head>
   <body>
     <noscript>
@@ -16,8 +17,8 @@
           <div class="ring-1"></div>
       </div> 
       <div class="wave">
-          <span class="wavetxt">loading...</span>
-          <span class="wavetext">loading...</span>
+          <span class="wavetxt">F2E WEEK1</span>
+          <span class="wavetext">F2E WEEK1</span>
       </div>
 
   </div>
@@ -26,11 +27,19 @@
 </html>
 
 <style>
+
   :root{
       --text-color: #DCDEFF;
       --ring-bg-color: #6E77E9;
   }
-
+  body{
+    background-color: #06102B;
+  }
+  #id{
+    font-family: 'ppm_black';
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media (max-width:1024px){
       .wave{
           display: none;
@@ -40,7 +49,7 @@
       height: 10px;
       margin: 0 auto;
       padding: 10px;
-      border: 7px dashed --ring-bg-color;
+      border: 7px dashed var(--ring-bg-color);
       border-radius: 100%;
   }
 
@@ -85,11 +94,11 @@
 
   .wavetxt {
       color: transparent;
-      -webkit-text-stroke: 2px var(--text-color);
+      -webkit-text-stroke: 2px var(--ring-bg-color);
   }
 
   .wavetext {
-      color: var(--text-color);
+      color: #DCDEFF;
       animation: wave 2s ease-in-out infinite;
   }
 

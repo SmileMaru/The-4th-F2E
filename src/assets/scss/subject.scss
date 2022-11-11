@@ -19,6 +19,7 @@
     width: 47vw;
     @include margin_auto;
     .subject_hot_title{
+        position: relative;
         color: $G1_Secondary_Color;
         font-size: 3vw;
         line-height: 2vw;
@@ -41,13 +42,14 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     top: -24vw;
 }
 .subject_cards_group{
     @include base(21vw, 24vw);
     background-color: $N1_Primary_Text;
     border-radius: 30px;
-    padding: 30px 20px;
+    padding: 2vw 1.3vw;
     text-align: center;
     box-sizing: border-box;
     h4{
@@ -62,7 +64,7 @@
     }
     .subject_card_img{
         @include margin_auto;
-        margin-bottom: 20px;
+        margin-bottom: 1vw;
     }
 }
 //card lock side
@@ -70,7 +72,7 @@
     box-sizing: border-box;
     background: $subject_cards_bgc;
     .para_lock_week{
-        @include heading_EN(32px, 48px);
+        @include heading_EN(2.1vw, 3.2vw);
         color: $N1_Primary_Text;
         line-height: 20px;
     }

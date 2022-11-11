@@ -2,6 +2,9 @@
     min-height: 700px;
     max-width: 100%;
     box-sizing: border-box;
+    @include tb(){
+        height: 75.8vw;
+    }
 }
 .interactive_marquee{
     position: relative;
@@ -26,7 +29,7 @@
         }
     }
 }
-.interactive_block{
+.interactive_block_container{
     min-height: 561px;
     background-image: url(../assets/images/interactive/banner_bg.jpg);
     background-size: cover;
@@ -36,15 +39,25 @@
 }
 .interactive_block_title_box{
     position: relative;
+    //綠色的框框
     .interactive_banner_img{
         @include base(530px, 335px);
+        @include tb(){
+            @include base(320px, 257px);
+        }
     }
+    //互動式網頁設計圖
     .interactive_title_img{
         z-index: 1;
         position: absolute;
         @include base(416px, 224px);
         top: 50px;
         left: 50px;
+        @include tb(){
+            @include base(240px, 137px);
+            top: 55px;
+            left: 40px;
+        }
     }
 }
 .interactive_hands_img_box{

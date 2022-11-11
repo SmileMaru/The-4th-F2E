@@ -7,7 +7,7 @@
         <span class="interactive_para">Interactive web design</span>
       </div>
       <!-- banner interactive image -->
-      <div class="interactive_block">
+      <div class="interactive_block_container">
         <div class="interactive_block_wrapper">
           <div class="interactive_block_title_box">
             <img
