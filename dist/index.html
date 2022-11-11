@@ -1,0 +1,87 @@
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/The-4th-F2E/dist/favicon.ico"><link rel="stylesheet" href="../public//font/PPM/font.css"><title>THE 4TH F2E</title><script defer="defer" src="/The-4th-F2E/dist/js/chunk-vendors.9c551da2.js"></script><script defer="defer" src="/The-4th-F2E/dist/js/app.a9b03292.js"></script><link href="/The-4th-F2E/dist/css/app.fd8b7c24.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="load-4"><div class="ring-1"></div></div><div class="wave"><span class="wavetxt">F2E WEEK1</span> <span class="wavetext">F2E WEEK1</span></div></div></body></html><style>:root{
+      --text-color: #DCDEFF;
+      --ring-bg-color: #6E77E9;
+  }
+  body{
+    background-color: #06102B;
+  }
+  #id{
+    font-family: 'ppm_black';
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width:1024px){
+      .wave{
+          display: none;
+      }
+      .ring-1 {
+      width: 10px;
+      height: 10px;
+      margin: 0 auto;
+      padding: 10px;
+      border: 7px dashed var(--ring-bg-color);
+      border-radius: 100%;
+  }
+
+  .load-4 .ring-1 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  }
+
+  @keyframes loadingD {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      50% {
+          transform: rotate(180deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  }
+  
+  .wave {
+      position: relative;
+  }
+  .wave span {
+      position: absolute;
+      text-align: center;
+      top:0;
+      left: 0;
+      right: 0;
+      line-height: 500px;
+      font-size: 150px;
+      text-transform: uppercase;
+  }
+
+  .wavetxt {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--ring-bg-color);
+  }
+
+  .wavetext {
+      color: #DCDEFF;
+      animation: wave 2s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+      0% {
+          clip-path: polygon(0% 38%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%);
+      }
+
+      50% {
+          clip-path: polygon(0 49%, 16% 56%, 33% 55%, 55% 50%, 75% 42%, 100% 40%, 100% 100%, 0% 100%);
+      }
+
+      100% {
+          clip-path: polygon(0% 38%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%);
+      }
+  }</style>
