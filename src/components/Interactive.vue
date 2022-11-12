@@ -21,12 +21,28 @@
               alt=""
             />
             <div class="interactive_hands_img_box">
-                <img src="../assets/images/interactive/hand_left.png" alt="" class="hand_img left_hand">
-                <img src="../assets/images/interactive/hand_right.png" alt="" class="hand_img right_hand">
+              <img
+                src="../assets/images/interactive/hand_left.png"
+                alt=""
+                class="hand_img left_hand"
+              />
+              <img
+                src="../assets/images/interactive/hand_right.png"
+                alt=""
+                class="hand_img right_hand"
+              />
             </div>
             <div class="interactive_circle_img_box">
-                <img src="../assets/images/interactive/yellow.png" alt="" class="yellow_circle">
-                <img src="../assets/images/interactive/purple.png" alt="" class="purple_circle">
+              <img
+                src="../assets/images/interactive/yellow.png"
+                alt=""
+                class="yellow_circle"
+              />
+              <img
+                src="../assets/images/interactive/purple.png"
+                alt=""
+                class="purple_circle"
+              />
             </div>
           </div>
           <!-- banner 文字 x 文字 -->
@@ -64,43 +80,61 @@ export default {
   },
   methods: {
     testScroll() {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".interactive_container",
-            start: "top center",
-            end: "top",
-            toggleActions: "play none none reset",
-            // markers: true,
-          },
-        })
-        .to(".interactive_para", {
-            xPercent: "-50",
-            ease: "power4.Out",
-            duration: 5,
-            // repeat: -1,
-        })
-        .to(
+      const sc = window.matchMedia("screen and (max-width: 768px)");
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".interactive_container",
+          start: "top center",
+          end: "top",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+      });
+      tl.to(".interactive_para", {
+        xPercent: "-50",
+        ease: "power4.Out",
+        duration: 5,
+        // repeat: -1,
+      })
+        .set(
           [
             ".interactive_title_img",
             ".interactive_banner_img",
-            ".left_hand",
-            ".right_hand",
             ".yellow_circle",
             ".purple_circle",
             ".interactive_ui_web_box",
           ],
           {
-            scale: 0, duration:0
-          }, "<"
+            scale: 0,
+            duration: 0,
+          },
+          "<"
         )
-        .from(".left_hand", { scale: 1, duration: 1.75, x: 350, rotation: 90 }, "<")
-        .from(".right_hand", { scale: 1, duration: 1.75, x: -350, rotation: -90 }, "<")
-        .from(".interactive_banner_img", { autoAlpha: 0, scale: 0, duration: 1.5}, "<")
-        .from(".interactive_title_img", { scale: 0, duration: 1.5}, "<")
-        .from(".interactive_ui_web_box", { scale: 0, duration: 1.5}, "<")
-        .from(".yellow_circle", { scale: 0, duration: 2, x:-100, y:100, rotation: -120}, "<")
-        .from(".purple_circle", { scale: 0, duration: 1.5, x:100, y:-100, rotation: 120}, "<");
+;
+      if (sc.matches) {
+        tl
+          .to(".left_hand", { autoAlpha: 1, duration: 1, y: "55%" }, "<")
+          .to(".right_hand", { autoAlpha: 1, duration: 1, y: "-55%" }, "<");
+      } else {
+        tl.from(
+          ".left_hand",
+          { scale: 1, duration: 1.75, x: 350, rotation: 90 },
+          "<"
+        ).from(".right_hand", { scale: 1, duration: 1.75, x: -350, rotation: -90 }, "<");
+      }
+      tl.from(".interactive_banner_img", { autoAlpha: 0, scale: 0, duration: 1.5 }, "<")
+        .from(".interactive_title_img", { scale: 0, duration: 1.5 }, "<")
+        .from(".interactive_ui_web_box", { scale: 0, duration: 1.5 }, "<")
+        .from(
+          ".yellow_circle",
+          { scale: 0, duration: 2, x: -100, y: 100, rotation: -120 },
+          "<"
+        )
+        .from(
+          ".purple_circle",
+          { scale: 0, duration: 1.5, x: 100, y: -100, rotation: 120 },
+          "<"
+        );
     },
   },
 };

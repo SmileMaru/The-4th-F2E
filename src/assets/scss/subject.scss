@@ -1,14 +1,27 @@
 .subject_container{
     min-height: 900px;
+    width: 100%;
+    box-sizing: border-box;
     .subject_wrapper{
         @include wrapper;
     }
 }
 .subject_page_title_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     .p1{
         color: $N1_Primary_Text;
         text-align: center;
         padding: 50px 0;
+        @include sm(){
+            font-size: 20px;
+            padding: 1rem;
+            display: inline-block;
+            width: 220px;
+            line-height: 28px;
+        }
     }
 }
 .subject_page_title_box {
@@ -16,25 +29,54 @@
     border: 4px solid $G1_Secondary_Color;
     border-radius: 100px;
     box-shadow: 0 0 8px $title_white_shadow;
-    width: 47vw;
+    width: 35vw;
     @include margin_auto;
+    @include md(){
+        width: 60vw;
+    }
+    @include sm(){
+        width: 270px;
+    }
     .subject_hot_title{
         position: relative;
         color: $G1_Secondary_Color;
-        font-size: 3vw;
-        line-height: 2vw;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 1rem;
+        @include sm(){
+            padding: 0 1rem;
+        }
         &::after{
             position: absolute;
             content: url(../assets/images/subject/lightningGroup.png);
             top: -5.3vw;
             right: -5vw;
+            @include md(){
+                content: url(../assets/images/subject/small_lightning.png);
+                top: -13vw;
+                right: -6vw;
+            }
+            @include sm(){
+                top: -15vw;
+                right: -13vw;
+            }
         }
     }
 }
 .subject_cards_container{
     position: relative;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    @include tb(){
+        width: 60%;
+        @include margin_auto;
+        @include md(){
+            width: 100%;
+        }
+    }
 }
 //card flip side
 .subject_cards_lock_container{
@@ -43,19 +85,30 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    top: -24vw;
+    top: -360px;
+    @include tb(){
+        display: none;
+    }
 }
 .subject_cards_group{
-    @include base(21vw, 24vw);
+    // @include base(21vw, 24vw);
+    @include base(300px, 360px);
     background-color: $N1_Primary_Text;
     border-radius: 30px;
-    padding: 2vw 1.3vw;
+    padding: 30px 15px;
     text-align: center;
     box-sizing: border-box;
+    @include tb(){
+        margin: 1rem;
+    }
     h4{
         color: $P3_Primary_Color_03;
         text-transform: uppercase;
         line-height: 0;
+        font-size: 24px;
+        @include sm(){
+            font-size: 20px;
+        }
     }
     .p2{
         color: $P3_Primary_Color_03;
@@ -64,7 +117,7 @@
     }
     .subject_card_img{
         @include margin_auto;
-        margin-bottom: 1vw;
+        width: 134px;
     }
 }
 //card lock side
@@ -77,7 +130,7 @@
         line-height: 20px;
     }
     .subject_lock_img{
-        @include base(13vw,13vw);
+        @include base(180px,180px);
         @include margin_auto;
     }
 }
@@ -89,9 +142,6 @@
         display: inline;
         padding: 4px 8px;
     }
-}
-.subject_card_img{
-    width: 9vw;
 }
 .subject_card_footer{
     display: flex;

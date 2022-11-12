@@ -165,6 +165,9 @@ $p_line_height: 28px;
     align-self: center;
     padding: 0.6vw 1.3vw;
     font-size: 1.3vw;
+    @include tb(){
+      font-size: 1rem;
+    }
   }
   li:hover::after {
     content: "";

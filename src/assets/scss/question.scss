@@ -9,17 +9,33 @@ $p_line_height: 28px;
 .q_section_container{
     position: relative;
     width: 100%;
-    // min-height: 1680px;
     box-sizing: border-box;
     .btn_box{
-        margin-top: 6.66vw;
+        margin-top: 6.66vw; 
+        .btn_signup{
+            @include tb(){
+                font-size: 20px;
+            }
+            @include sm(){
+                width: auto;
+                padding: 20px;
+                margin: 2rem;
+            }
+        }
     }
 }
 .q_wrapper{
     @include wrapper();
+    @include tb(){
+        width: 100%;
+    }
 }
 .q_content_box{
     @include wrapper();
+    overflow: hidden;
+    @include tb(){
+        width: 90%;
+    }
     .q_heading{
         font-family: $font_family_black;
         text-align: center;
@@ -27,28 +43,43 @@ $p_line_height: 28px;
         color: $N1_Primary_Text;
         -webkit-filter: $text_drop_shadow;
         filter: $text_drop_shadow;
+        @include md(){
+            font-size: 2rem;
+        }
     }
 }
-.tabs{
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly; 
-    padding-bottom: 3rem;
-    color: $N1_Primary_Text;
-    li{
-        color: $N2_Secondary_Text;
-        font-size: $p_font_size;
-        font-weight: 400;
-        line-height: $p_line_height;
-        cursor: pointer;
-        position: relative;
+.tabs_flow_box{
+    overflow-x: scroll;
+    -ms-overflow-style: none; //隱藏IE 的scroll bar
+    &::-webkit-scrollbar {
+        display: none; //隱藏 Chrome 的scroll bar
     }
-    li.active{
+    .tabs{
+        display: flex;
+        justify-content: space-evenly; 
+        padding-bottom: 3rem;
         color: $N1_Primary_Text;
-        -webkit-filter: $text_drop_shadow;
-        filter: $text_drop_shadow;
+        width: 100%;
+        @include md(){
+            width: 700px;
+            padding-bottom: 2rem;
+        }
+        li{
+            color: $N2_Secondary_Text;
+            font-size: $p_font_size;
+            font-weight: 400;
+            line-height: $p_line_height;
+            cursor: pointer;
+            position: relative;
+        }
+        li.active{
+            color: $N1_Primary_Text;
+            -webkit-filter: $text_drop_shadow;
+            filter: $text_drop_shadow;
+        }
     }
 }
+
 .tabs li::after{
     content: "";
     position: absolute;
@@ -66,17 +97,27 @@ $p_line_height: 28px;
 }
 .q_box{
     display: flex;
+    @include tb(){
+        flex-direction: column;
+    }
 }
 .q_qty{
     font-family: $font_family_black;
     margin-right: 2rem;
     color: $P3_Primary_Color_03;
+    display: inline;
+    @include tb(){
+        line-height: 0;
+    }
 }
 .q_common_container{
     box-sizing: border-box;
     position: relative;
     @include margin_auto;
     width: 80%;
+    @include tb(){
+        width: 90%;
+    }
 }
 .q_content{
     box-sizing: border-box;
@@ -87,6 +128,9 @@ $p_line_height: 28px;
     background-color: $N1_Primary_Text;
     padding: 80px;
     border-radius: 32px;
+    @include tb(){
+        padding: 2rem;
+    }
 }
 .q_content.active{
     display: block;
@@ -95,6 +139,8 @@ $p_line_height: 28px;
 .q_accordion{
     h4{
         font-family: $font_family;
+        font-size: 24px;
+        margin: 0;
     }
     p{
         font-weight: 400;

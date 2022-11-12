@@ -124,7 +124,7 @@ export default {
         .from(".card_week2", { autoAlpha: 1, y: "+=150%", duration: 1.25 }, "<")
         .from(".card_titan", { autoAlpha: 0, y: "+=100%", duration: 1 }, "<")
         .from(".card_week3", { autoAlpha: 1, y: "+=100%", duration: 1 }, "<")
-        .to([".card_block_studio", ".card_kdan", ".card_titan"], {scaleX: 0, duration: 0}, ">")
+        .set([".card_block_studio", ".card_kdan", ".card_titan"], {scaleX: 0}, ">")
         .fromTo(".card_week1", {autoAlpha: 1}, {autoAlpha: 0, rotateY: 180, duration: 1})
         .fromTo(".card_block_studio", {autoAlpha: 0}, {autoAlpha: 1, zIndex: 200, scaleX: 1, duration: 0.7, ease: "linear",}, "<+0.2")
         .fromTo(".card_week2", {autoAlpha: 1}, {autoAlpha: 0, rotateY: 180, duration: 1})

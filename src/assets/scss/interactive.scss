@@ -1,9 +1,9 @@
 .interactive_container{
     min-height: 700px;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
-    @include tb(){
-        height: 75.8vw;
+    @include md(){
+        min-height: 800px;
     }
 }
 .interactive_marquee{
@@ -19,7 +19,7 @@
         align-items: center;
         text-transform: uppercase;
         color: $N1_Primary_Text;
-        @include heading_EN(2.4vw, 2.8vw);
+        @include heading_EN(25px, 25px);
         &::before{
             content:'';
             @include base(1vw, 1vw);
@@ -30,9 +30,10 @@
     }
 }
 .interactive_block_container{
+    overflow: hidden;
     min-height: 561px;
     background-image: url(../assets/images/interactive/banner_bg.jpg);
-    background-size: cover;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,14 +66,26 @@
     .hand_img{
         position: absolute;
         @include base(250px, 250px);
+        @include md(){
+            @include base(180px, 180px);
+        }
     }
     .left_hand{
         top: -300px;
         left: -220px;
+        @include md(){
+            left: 80px;
+            top: -150px;
+            transform: rotate(210deg);
+        }
     }
     .right_hand{
         top: -300px;
         right: -220px;
+        @include md(){
+            left: 80px;
+            transform: rotate(-55deg);
+        }
     }
 }
 .interactive_circle_img_box{
@@ -82,19 +95,30 @@
         @include base(205px, 205px);
         top: -20px;
         left: -220px;
+        @include md(){
+            @include base(160px, 160px);
+            left: -80px;
+        }
     }
     .purple_circle{
         position: absolute;
         @include base(110px,110px);
         top: -380px;
         right: -60px;
+        @include md(){
+            @include base(90px, 90px);
+            top: -350px;
+            right: -30px;
+        }   
     }
-
 }
 .interactive_ui_web_box{
     display: flex;
     justify-content: space-around;
     margin: 20px 0;
+    @include md(){
+        display: none;
+    }
     span{
         @include heading_CN(24px, 36px);
     }

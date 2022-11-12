@@ -11,5 +11,6 @@
 .btn_box{
     display: flex;
     justify-content: center;
+
 }
 </style>

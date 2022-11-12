@@ -1,9 +1,18 @@
 .wish_container{
     width: 100%;
     margin-bottom: 12vw;
+    @include tb(){
+        min-height: 40vh;
+    }
+    @include sm(){
+        min-height: 70vh;
+    }
     .wish_wrapper{
         @include wrapper;
         max-width: 60vw;
+        @include md(){
+            width: 100%;
+        }
     }
 }
 .wish_animation_img_box{
@@ -13,6 +22,13 @@
         @include base(18.6vw,7vw);
         position: relative;
         left: 5.3vw;
+        @include tb(){
+            @include base(230px,70px);
+        }
+        @include md(){
+            @include base(120px,50px);
+            left: -10px;
+        }
     }
     .wish_img_star{
         @include base(4vw,4vw);
@@ -21,15 +37,27 @@
     }
     .wish_img_purple1{
         @include base(30vw,13vw);
+        @include tb(){
+            @include base(207px,100px);
+        }
     }
     .wish_img_question{
         @include base(10vw,9vw);
         position: absolute;
         right: 15%;
         top: -10%;
+        @include sm(){
+            @include base(75px,70px);
+            right: -50px;
+            top: -50%;
+        }
     }
     .wish_img_surprise{
         @include base(15vw,12vw);
+        @include sm(){
+            @include base(100px,80px);
+        }
+        
     }
     .wish_img_maru{
         @include base(6vw,6vw);
@@ -39,29 +67,61 @@
         position: absolute;
         right: 0;
         top: -50%;
+        @include tb(){
+            @include base(230px,100px);
+        }
+        @include sm(){
+            @include base(180px,90px);
+            top: 30px;
+            left: 80px;
+        }
     }
     .wish_img_rect2{
         @include base(25vw,7.5vw);
         position: absolute;
         left: 30%;
         top: -4vw;
+        @include tb(){
+            @include base(200px,70px);
+        }
+        @include sm(){
+            @include base(100px,50px);
+            top: 50px;
+            left: 100px;
+        }
     }
     .wish_img_polygon{
         @include base(8vw,5vw);
         position: absolute;
         left: 90%;
         top: -4vw;
+        @include sm(){
+            top: -80px;
+        }
     }
     .wish_img_eyes{
         @include base(13vw,10vw);
         position: absolute;
         left: 74%;
         top: 3.3vw;
+        @include sm(){
+            @include base(80px,80px);
+            top: 100px;
+            left: 200px;
+        }
     }
     .wish_img_purple2{
         @include base(30vw,13vw);
         position: absolute;
         left: 10%;
         top: 4.5vw;
+        @include tb(){
+            @include base(267px,100px);
+        }
+        @include sm(){
+            @include base(190px,100px);
+            left: -10px;
+            top: 100px;
+        }
     }
 }

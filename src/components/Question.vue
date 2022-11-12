@@ -3,12 +3,14 @@
     <div class="q_wrapper">
       <div class="q_content_box">
         <h2 class="q_heading">Q&A</h2>
-        <ul class="tabs">
-          <li>常見問題</li>
-          <li>UI設計師常見問題</li>
-          <li>前端工程師常見問題</li>
-          <li>團體組常見問題</li>
+        <div class="tabs_flow_box">
+          <ul class="tabs">
+            <li>常見問題</li>
+            <li>UI設計師常見問題</li>
+            <li>前端工程師常見問題</li>
+            <li>團體組常見問題</li>
         </ul>
+        </div>
       </div>
 
       <!-- 常見問題 第一個分頁 -->
@@ -207,6 +209,8 @@
             </div>
           </div>
         </div>
+        <!-- rwd 會出現的底部選項 -->
+        
       </div>
     </div>
     <div class="btn_box">

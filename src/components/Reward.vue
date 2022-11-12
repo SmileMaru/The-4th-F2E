@@ -1,11 +1,12 @@
 <template>
   <section class="reward_container">
     <div class="reward_wrapper">
-      <h2 class="page_title reward_page_title">
+      <div class="reward_main_title_box">
+        <h2 class="page_title">
         區區修煉已經無法滿足了嗎？<span class="title_delay">還有比賽等著你!</span>
       </h2>
-    </div>
-    <div class="reward_vetor_line_container">
+      </div>
+      <div class="reward_vetor_line_container">
       <div class="reward_vetor_container">
         <img src="../assets/images/rewards/Vector-flag.png" alt="" class="vetor_flag" />
         <img src="../assets/images/rewards/Vector-car.png" alt="" class="vetor_car" />
@@ -46,7 +47,7 @@
             />
             <h3 class="reward_cards_title">獎金</h3>
           </div>
-          <div class="card_context">
+          <div class="card_context card_content_rwd_noShow">
             <h5>
               初選佳作：<span class="p2 para_space">共六十位</span
               ><span class="p2 accent_word">數位獎狀</span>
@@ -56,7 +57,7 @@
               個人企業獎：<span class="p2 para_space">共六位</span
               ><span class="p2 accent_word">NTD 3,000/位</span>
             </h5>
-            <p class="p3">每週主題個人組十位、團體組十組</p>
+            <p class="p3">每週主題各兩名，設計一位、前端 一位</p>
             <h5>
               團體企業獎：<span class="p2 para_space">共三組</span
               ><span class="p2 accent_word">NTD 10,000/組</span>
@@ -64,9 +65,30 @@
             <p class="p3">每週主題各一組</p>
             <h5>以上皆提供完賽數位獎狀</h5>
           </div>
+          <div class="card_context_rwd">
+            <h5>初選佳作：</h5>
+            <span class="p2 para_space">共六十位</span
+              ><span class="p2 accent_word">數位獎狀</span>
+            <p class="p3">每週主題個人組十位、團體組十組</p>
+            <h5>
+              個人企業獎：
+            </h5>
+            <span class="p2 para_space">共六位</span
+              ><span class="p2 accent_word">NTD 3,000/位</span>
+            <p class="p3">每週主題各兩名，設計一位、前端 一位</p>
+            <h5>
+              團體企業獎：
+            </h5>
+            <span class="p2 para_space">共三組</span
+              ><span class="p2 accent_word">NTD 10,000/組</span>
+            <p class="p3">每週主題各一組</p>
+            <h5>以上皆提供完賽數位獎狀</h5>
+          </div>
         </div>
       </div>
     </div>
+    </div>
+    
   </section>
 </template>
 
@@ -90,17 +112,17 @@ export default {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".reward_page_title",
+            trigger: ".reward_main_title_box",
             start: "top center",
             end: "top",
-            toggleActions: "play none none none",
-            // markers: true,
+            toggleActions: "play none none reset",
+            markers: true,
           },
         })
-        .from(".reward_page_title", { autoAlpha: 0, y: 10, duration: 1 }, "<")
+        .from(".reward_main_title_box", { autoAlpha: 0, y: 10, duration: 1 }, "<")
         .from(".reward_cards_group", { autoAlpha: 0, y: 10, duration: 1 }, "<")
         .from(".title_delay", { autoAlpha: 0, y: 10, duration: 1 }, "<1")
-        .to(".vetor_car", { x: "-750%", duration: 0.7 })
+        .to(".vetor_car", { x: "-50vw", duration: 0.7 })
         .to(".vetor_flag", { rotation: "-45deg", x: -20, y: -20, duration: 1 });
     },
   },

@@ -4,6 +4,9 @@
     background-color: $N4_Bk_Color_01;
     .event_wrapper{
         @include wrapper;
+        @include md(){
+            width: 90%;
+        }
     }
 }
 .event_page_title{
@@ -12,12 +15,18 @@
     padding: 40px 0;
     .page_title{
         position: relative;
-        @include heading_CN(3.5vw, 2.5vw);
+        @include heading_CN(2.5rem, 3.75rem);
+        @include sm(){
+            @include heading_CN(2rem, 2rem);
+        }
     }
 }
 .event_title_pac_man{
     display: flex;
-    padding: 0 30px;
+    padding: 0 1.5vw;
+    @include sm(){
+        padding: 0 1vw;
+    }
     .dot{
         @include base(6px, 6px);
         align-self: center;
@@ -32,11 +41,18 @@
     }
     .event_pac_man_img{
         align-self: center;
-        @include base(2.5vw, 2.5vw);
+        width: 40px;
+    }
+}
+.event_cards_container{
+    @include margin_auto;
+    @include lg(){
+        display: none;
     }
 }
 .event_cards_flow{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     .event_arrow_img_box{
         align-self: center;
@@ -44,13 +60,23 @@
 }
 .event_cards_group{
     display: flex;
-    width: 34.6vw;
+    @include base(520px, 300px);
     border: 3px solid $N1_Primary_Text;
     border-radius: 32px;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    @include sm(){
+        @include base(340px, auto);
+    }
     .event_img_box{
         align-self: center;
-        // padding: 0 4vw;
+        box-sizing: border-box;
+        img{
+            @include base( 4.3rem, 6rem);
+            @include sm(){
+                @include base( 4rem, 5rem);
+            }
+        }
     }
     .event_live_stream{
         align-self: center;
@@ -67,11 +93,22 @@
 }
 .event_img_box img{
     @include base(5.5vw, 7vw);
+    @include md(){
+        @include margin_auto;
+    }
 }
 .event_content{
     box-sizing: border-box;
-    // padding: 0 2.5vw;
     color: $N1_Primary_Text;
+    @include sm(){
+        padding: 0 1rem;
+    }
+    h3{
+        font-size: 32px;
+        @include md(){
+            text-align: center;
+        }
+    }
     .line{
         @include margin_auto;
         @include base(2px, 12px);
@@ -83,7 +120,7 @@
 }
 .event_arrow_img_box{
     .event_arrow_img{
-        width: 2.5vw;
+        width: 40px;
     }
 }
 .arrow_middle{
@@ -98,4 +135,29 @@
 }
 .third_arrow{
     transform: rotate(180deg);
+}
+
+// RWD tablet & mobile
+.event_cards_rwd_container{
+    display: none;
+    @include lg(){
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: space-evenly;
+    }
+    .event_cards_group{
+        box-sizing: border-box;
+        @include sm(){
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .event_arrow_img_box{
+        transform: rotate(90deg);
+        margin: 1rem;
+    }
 }

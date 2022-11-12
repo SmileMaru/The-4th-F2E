@@ -90,9 +90,13 @@ export default {
   padding-bottom: 80px;
 }
 .sponsor_cards {
-  width: 33%;
+  width: 30%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  @include tb(){
+    width: 60%;
+  }
   a{
     border: 9px solid;
     border-radius: 30px;
