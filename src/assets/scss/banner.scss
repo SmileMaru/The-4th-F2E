@@ -165,7 +165,7 @@
         align-items: center;
         min-height: 4.4vw;
         white-space: nowrap; /*文字必須設為nowrap，否則文字會自動換行*/
-        @include heading_EN(4vw, 0);
+        @include heading_EN(3vw, 0);
         background: linear-gradient(180deg,#9FA6FF, #55FFAD);
         -webkit-background-clip: text;
         -webkit-text-stroke: 4px transparent;

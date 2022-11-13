@@ -2,9 +2,14 @@
   <section class="interactive_container">
     <div class="interactive_wrapper">
       <div class="interactive_marquee">
-        <span class="interactive_para">Interactive web design</span>
-        <span class="interactive_para">Interactive web design</span>
-        <span class="interactive_para">Interactive web design</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
       </div>
       <!-- banner interactive image -->
       <div class="interactive_block_container">
@@ -60,9 +65,14 @@
         </div>
       </div>
       <div class="interactive_marquee">
-        <span class="interactive_para">Interactive web design</span>
-        <span class="interactive_para">Interactive web design</span>
-        <span class="interactive_para">Interactive web design</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
+        <span class="interactive_para">{{marqueeText}}</span>
       </div>
     </div>
   </section>
@@ -75,6 +85,11 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 export default {
+  data(){
+    return{
+      marqueeText:'Interactive web design',
+    }
+  },
   mounted() {
     this.testScroll();
   },
@@ -91,7 +106,7 @@ export default {
         },
       });
       tl.to(".interactive_para", {
-        xPercent: "-50",
+        xPercent: "-100",
         ease: "power4.Out",
         duration: 5,
         // repeat: -1,

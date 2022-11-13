@@ -15,6 +15,7 @@
     &:hover{
         background-color: $Y2_Decoration_Btn_Hover;
         transition: .2s ease-in;
+        box-shadow: 0px 0px 11px $Y2_Decoration_Btn_Hover;
     }
 }
 .btn_box{
