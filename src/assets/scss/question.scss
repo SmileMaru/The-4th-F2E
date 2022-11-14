@@ -104,10 +104,13 @@ $p_line_height: 28px;
 .q_qty{
     font-family: $font_family_black;
     margin-right: 2rem;
+    margin-top: 0;
     color: $P3_Primary_Color_03;
     display: inline;
+    align-self: start;
     @include tb(){
         line-height: 0;
+        margin-top: 1.5rem;
     }
 }
 .q_common_container{
