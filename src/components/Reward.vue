@@ -116,7 +116,7 @@ export default {
             start: "top center",
             end: "top",
             toggleActions: "play none none reset",
-            markers: true,
+            // markers: true,
           },
         })
         .from(".reward_main_title_box", { autoAlpha: 0, y: 10, duration: 1 }, "<")
